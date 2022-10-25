@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+
+main{
+    height: 100vh;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.container{
+    background-color: aqua;
+    width: 180px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7rem; 
+    border-radius: 10px;
+    box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), 0px 9px 0px 6px rgba(0,0,0,0.1), 0px 12px 0px 8px rgba(0,0,0,0.1), 0px 15px 0px 10px rgba(0,0,0,0.1), 0px 18px 0px 12px rgba(0,0,0,0.1), 0px 21px 0px 14px rgba(0,0,0,0.1), 0px 24px 0px 16px rgba(0,0,0,0.1), 0px 27px 0px 18px rgba(0,0,0,0.1), 0px 30px 0px 20px rgba(0,0,0,0.1), 10px 6px 18px 4px rgba(0,0,0,0);
+    background: #444444;
+}
+
+.tela{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(213,213,213);
+    background: radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(163,163,163,1) 84%);
+    border-radius: 10px 10px 0 0;
+}
+.triangulo{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent#bdc0bd  transparent; 
+
+}
+.trianguloDescendo{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: #bdc0bd transparent transparent transparent;
+}
+#numberAndar{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+    width: 50px;
+    color: orange;
+    border-radius: 8px;
+}
+
+.andar{
+    width: 100%;
+    height: calc(100vh / 4);
+    background-color:rgb(0, 0, 0) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    
+
+
+}
+.andar:last-child{
+    border-radius:0 0 10px 10px;
+}
+
+.andar img{
+    width: 80%;
+    height: calc(100vh / 5 - 2px);
+}
+
+.segundoAndar{
+    background-color: rgb(38, 0, 255);
+}
+
+.primeiroAndar{
+    background-color: chartreuse;
+}
+
+.terreoAndar{
+    background-color: rgb(210, 211, 142);
+}
+
+.painel{
+    width: 6rem;
+    background: rgb(213,213,213);
+    background: radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(163,163,163,1) 84%);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.25rem;
+    border-radius: 1.25rem;
+    border: 2px solid black;
+    box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.56);
+}
+
+.painel button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border-color: black;
+    margin: 1.25rem;
+    cursor: pointer;
+    background-color: #a9eca9;
+    box-shadow: inset -1px 3px 8px 5px, 2px 5px 10px 0px #000000, 10px 6px 18px 4px rgba(0,0,0,0);
+}
+.painel button:disabled{
+    background-color: #ecada9;
+}
+
+
+
+@keyframes transicaoSubir{
+    0%{
+        border-color: transparent transparent#a9eca9  transparent; 
+    }
+
+    100%{
+        border-color: transparent transparent rgb(102, 185, 102) transparent; 
+      
+    }
+}
+
+@keyframes transicaoDescer{
+    0%{
+        border-color: #ecada9 transparent transparent transparent; 
+    }
+
+    100%{
+        border-color: rgb(185, 102, 102) transparent transparent transparent; 
+      
+    }
+}
+
+@media (max-width:500px) {
+
+    
+    main{
+        height:100vh;
+        background-size:cover;
+        background-position: center;
+    }
+
+    .container{
+        width: 100%;
+        margin-left:70px;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        justify-content: space-between;
+    }
+    .tela{
+        background-color:rgb(161, 161, 161);
+        width: 100%;
+        height: 80px;
+    }
+    
+    .andar{
+        width: 100%;
+        height: calc((100vh - 100px) / 4);
+    }
+    
+    .andar img{
+        width: 70%;
+        height: calc((100vh - 100px)  / 4 );
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elevador</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="tela">
+                <div class="triangulo"></div>
+                <h1 id="numberAndar">T</h1>
+                <div class="trianguloDescendo "></div>
+            </div>
+            <div class="andar terceiroAndar">
+                <img src="img/elevadorFechado.jpg" alt="elevador fechado" class="img-terceiroAndar">
+            </div>
+            <div class="andar segundoAndar">
+              <img src="img/elevadorFechado.jpg" alt="elevador fechado" class="img-segundoAndar"> 
+            </div>
+            <div class="andar primeiroAndar">
+                <img src="img/elevadorFechado.jpg" alt="elevador fechado" class="img-primeiroAndar"> 
+            </div>
+            <div class="andar terreoAndar">
+                <img src="img/elevadorAberto.jpg" alt="elevador aberto" class="img-terreo"> 
+            </div>
+        </div>
+        <div class="painel">
+            <button id="btn-terreo" value="terreo" onclick="subir(0)" disabled>0</button>
+            <button id="btn-primeiro" value="1" onclick="subir(1)">1</button>
+            <button id="btn-segundo" value="2" onclick="subir(2)">2</button>
+            <button id="btn-terceiro"value="3" onclick="subir(3)">3</button>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
