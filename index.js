@@ -59,6 +59,15 @@ function mostraAndar(destino){
             document.querySelector("#numberAndar").innerText = destino;
         },4000);
     }
+    if(atual === 2 && destino === 0){
+        mostraTrianguloDescendo()
+        setTimeout(()=>{
+            document.querySelector("#numberAndar").innerText = '1';
+        },3200);
+        setTimeout(()=>{
+            document.querySelector("#numberAndar").innerText = 'T';
+        },4000);
+    }
 
     if(atual === 2 && destino === 3){
         mostraTrianguloSubindo()
