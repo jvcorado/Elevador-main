@@ -44,10 +44,17 @@ function mostraAndar(destino){
         },5000);
     }
 
-    if(atual === 1 && destino === 2){
+    if(atual === 1 && destino === 0){
         mostraTrianguloSubindo()
         setTimeout(()=>{
             document.querySelector("#numberAndar").innerText = destino;
+        },3200);
+    }
+
+    else if(atual === 1 && destino === 2){
+        mostraTrianguloSubindo()
+        setTimeout(()=>{
+            document.querySelector("#numberAndar").innerText = 'T';
         },3200);
     }
     else if(atual === 1 && destino === 3){
